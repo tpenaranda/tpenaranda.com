@@ -1,0 +1,53 @@
+html, body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 200;
+    height: 100vh;
+    margin: 0;
+}
+a {
+    color: #fff;
+    padding: 0 5px;
+    font-size: 13px;
+    font-weight: 300;
+    letter-spacing: .1rem;
+    text-decoration: none;
+ }
+.full-height {
+    height: 100vh;
+ }
+ .flex-center {
+     align-items: center;
+     display: flex;
+     justify-content: center;
+ }
+ .position-ref {
+     position: relative;
+ }
+ .top-right {
+     position: absolute;
+     right: 10px;
+     top: 18px;
+ }
+ .content {
+     text-align: center;
+ }
+ .title {
+     font-size: 42px;
+ }
+.picture {
+    width: 35%;
+    margin: 0 auto 45px;
+}
+.picture img {
+    width: 100%;
+    border-radius: 15%;
+}
+@font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 200;
+    src: local('Nunito ExtraLight'), local('Nunito-ExtraLight'), url(https://fonts.gstatic.com/s/nunito/v11/XRXW3I6Li01BKofA-seUYevI.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
