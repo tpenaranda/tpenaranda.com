@@ -55,6 +55,8 @@
                     srcset="images/picture_350w.png 350w, images/picture_500w.png 500w, images/picture_700w.png 700w, images/picture.png 860w"
                     sizes="(max-width: 1024px) 250px, 350px"
                     alt="Tate"
+                    onclick="pictureClick()"
+                    id="picture"
                 />
             </div>
             <div class="introduction">
@@ -74,6 +76,18 @@
     <script>
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('sw.js', { scope: '/' });
+        }
+
+        let counter = 0;
+
+        function pictureClick() {
+            if (counter++ === 9) {
+                let picture = document.getElementById('picture')
+
+                picture.src = 'images/qr_contact.png'
+                picture.srcset = ''
+                picture.style.borderRadius = 0
+            }
         }
     </script>
 </html>

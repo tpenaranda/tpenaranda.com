@@ -65,7 +65,7 @@ ul.links li {
     margin: auto;
 }
 
-.picture img {
+#picture {
     width: 100%;
     border-radius: 15%;
 }
