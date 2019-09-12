@@ -65,9 +65,17 @@ ul.links li {
     margin: auto;
 }
 
-#picture {
+.picture img {
     width: 100%;
+}
+
+#picture {
     border-radius: 15%;
+    display: block;
+}
+
+#contact-card {
+    display: none;
 }
 
 .introduction {

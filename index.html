@@ -10,23 +10,23 @@
 
         <!-- Search Engine -->
         <meta name="description" content="Software Engineer. Human being. Computer hobbyist since age 6 and professional software engineer since more than 12 years.">
-        <meta name="image" content="https://tpenaranda.com/images/picture_350w.png">
+        <meta name="image" content="https://tpenaranda.com/images/picture_175w.png">
 
         <!-- Schema.org for Google -->
         <meta itemprop="name" content="Tate Peñaranda">
         <meta itemprop="description" content="Software Engineer. Human being. Computer hobbyist since age 6 and professional software engineer since more than 12 years.">
-        <meta itemprop="image" content="https://tpenaranda.com/images/picture_350w.png">
+        <meta itemprop="image" content="https://tpenaranda.com/images/picture_175w.png">
 
         <!-- Twitter -->
         <meta name="twitter:card" content="summary">
         <meta name="twitter:title" content="Tate Peñaranda">
         <meta name="twitter:description" content="Software Engineer. Human being. Computer hobbyist since age 6 and professional software engineer since more than 12 years.">
-        <meta name="twitter:image:src" content="https://tpenaranda.com/images/picture_350w.png">
+        <meta name="twitter:image:src" content="https://tpenaranda.com/images/picture_175w.png">
 
         <!-- Open Graph general (Facebook, Pinterest & Google+) -->
         <meta name="og:title" content="Tate Peñaranda">
         <meta name="og:description" content="Software Engineer. Human being. Computer hobbyist since age 6 and professional software engineer since more than 12 years.">
-        <meta name="og:image" content="https://tpenaranda.com/images/picture_350w.png">
+        <meta name="og:image" content="https://tpenaranda.com/images/picture_175w.png">
         <meta name="og:url" content="https://tpenaranda.com/">
         <meta name="og:site_name" content="Tate Peñaranda">
         <meta name="og:type" content="website">
@@ -50,13 +50,17 @@
                     <li><a href="https://github.com/tpenaranda/tpenaranda_cv/raw/master/tpenaranda_cv.pdf">PDF Resume</a></li>
                 </ul>
             </div>
-            <div class="picture">
+            <div class="picture" onclick="pictureClick()">
                 <img src="images/picture.png"
-                    srcset="images/picture_350w.png 350w, images/picture_500w.png 500w, images/picture_700w.png 700w, images/picture.png 860w"
+                    srcset="images/picture_350w.png 175w, images/picture_350w.png 350w, images/picture_500w.png 500w, images/picture_700w.png 700w, images/picture.png 860w"
                     sizes="(max-width: 1024px) 250px, 350px"
                     alt="Tate"
-                    onclick="pictureClick()"
                     id="picture"
+                />
+                <img src="images/qr_contact.png"
+                    alt="Contact Card"
+                    onclick="pictureClick()"
+                    id="contact-card"
                 />
             </div>
             <div class="introduction">
@@ -75,7 +79,7 @@
     </body>
     <script>
         if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('sw.js', { scope: '/' });
+            //navigator.serviceWorker.register('sw.js', { scope: '/' });
         }
 
         let counter = 0;
@@ -83,10 +87,16 @@
         function pictureClick() {
             if (counter++ === 9) {
                 let picture = document.getElementById('picture')
+                let contactCard = document.getElementById('contact-card')
 
-                picture.src = 'images/qr_contact.png'
-                picture.srcset = ''
-                picture.style.borderRadius = 0
+                picture.style.display = 'none';
+                contactCard.style.display = 'block';
+
+                setTimeout(() => {
+                    picture.style.display = 'block';
+                    contactCard.style.display = 'none';
+                    counter = 0;
+                }, 30000);
             }
         }
     </script>
