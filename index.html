@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -50,23 +50,20 @@
                     <li><a href="https://github.com/tpenaranda/tpenaranda_cv/raw/master/tpenaranda_cv.pdf">PDF Resume</a></li>
                 </ul>
             </div>
-            <div class="picture" onclick="pictureClick()">
+            <div class="picture" onclick="handlePictureClick()">
                 <img src="images/picture.png"
                     srcset="images/picture_350w.png 175w, images/picture_350w.png 350w, images/picture_500w.png 500w, images/picture_700w.png 700w, images/picture.png 860w"
                     sizes="(max-width: 1024px) 250px, 350px"
                     alt="Tate"
                     id="picture"
                 />
-                <img src="images/qr_contact.png"
-                    alt="Contact Card"
-                    onclick="pictureClick()"
-                    id="contact-card"
-                />
+                <img src="images/qr_contact.png" alt="Contact Card" onclick="handlePictureClick()" id="contact-card" />
             </div>
             <div class="introduction">
-                <p>Hi! I’m Tate. Human being. Computer hobbyist since age 6 and professional software engineer since more than 12 years. Quality is an obsession for me. Quality means (plus "it works"), high performance, smart design, tidy, scalable, organic, testeable, easy to maintain, easy to understand, fast writing, easy to deploy and... easy to delete code.</p>
+                <p>Hi! I’m Tate. Human being. Computer hobbyist since age 6 and professional software engineer since more than 12 years. Quality is top priority for me. Quality means (plus "it works"), high performance, smart design, tidy, scalable, organic, testeable, easy to maintain, easy to understand, fast writing, easy to deploy and... easy to delete code.</p>
                 <p>Soon or later, business rules on a project will change, and is in that moment, when smart design comes into play. Meet requirements is a must, but things do not end there... code must handle short and long term future.</p>
                 <p>When using a high level programming language or a framework, code is written for humans, not computers. There is no reason to avoid high readability or don't speed up development process using framework capabilities. <strong>Agile methodologies work well under unexpected changes but, we must also write code able to respond to changes.</strong></p>
+                <p>I value transparency, proactive attitude and healthy teams were everyone can trust on each others skills.</p>
             </div>
             <div class="greeting">
                 <p>Nice to meet you.<br><strong><i>Let’s build something amazing!</i></strong></p>
@@ -84,7 +81,7 @@
 
         let counter = 0;
 
-        function pictureClick() {
+        function handlePictureClick() {
             if (counter++ === 9) {
                 let picture = document.getElementById('picture')
                 let contactCard = document.getElementById('contact-card')
